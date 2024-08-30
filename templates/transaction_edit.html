@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+<!-- Botão de Voltar -->
+<p>
+  <a href="{{ url_for('index') }}" class="btn btn-secondary">Back</a>
+</p>
+<!-- Formulário de Edição de Transação -->
+<h2>Edit Transaction</h2>
+<form method="POST">
+  {{ form.hidden_tag() }}
+  <p>
+    {{ form.date.label }}<br />
+    {{ form.date(size=32) }}
+  </p>
+  <p>
+    {{ form.description.label }}<br />
+    {{ form.description(size=64) }}
+  </p>
+  <p>
+    {{ form.amount.label }}<br />
+    {{ form.amount(size=32) }}
+  </p>
+  <p>
+    {{ form.type.label }}<br />
+    {{ form.type() }}
+  </p>
+  <p>{{ form.submit() }}</p>
+</form>
+
+{% endblock %}

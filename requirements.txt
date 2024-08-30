@@ -1,0 +1,15 @@
+limits==3.13.0
+markdown-it-py==3.0.0
+MarkupSafe==2.1.5
+mdurl==0.1.2
+ordered-set==4.1.0
+packaging==24.1
+pygments==2.18.0
+python-dotenv==1.0.1
+rich==13.8.0
+SQLAlchemy==2.0.32
+typing-extensions==4.12.2
+werkzeug==3.0.4
+wrapt==1.16.0
+wtforms==3.1.2
+zipp==3.20.1
