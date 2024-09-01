@@ -1,6 +1,26 @@
 {% extends 'base.html' %} {% block content %}
-<h2>Financial Report</h2>
-<p>Total Income: ${{ total_income }}</p>
-<p>Total Expense: ${{ total_expense }}</p>
-<p>Balance: ${{ balance }}</p>
+<h2 class="text-2xl font-bold mb-6">Financial Report</h2>
+
+<div class="bg-white p-6 rounded-lg shadow-md space-y-4">
+  <div class="flex justify-between items-center">
+    <p class="text-lg font-semibold text-gray-700">Total Income:</p>
+    <p class="text-lg font-bold text-green-600">${{ total_income }}</p>
+  </div>
+
+  <div class="flex justify-between items-center">
+    <p class="text-lg font-semibold text-gray-700">Total Expense:</p>
+    <p class="text-lg font-bold text-red-600">${{ total_expense }}</p>
+  </div>
+
+  <hr class="border-t-2 border-gray-200" />
+
+  <div class="flex justify-between items-center">
+    <p class="text-lg font-semibold text-gray-700">Balance:</p>
+    <p
+      class="text-lg font-bold {% if balance >= 0 %}text-green-600{% else %}text-red-600{% endif %}"
+    >
+      ${{ balance }}
+    </p>
+  </div>
+</div>
 {% endblock %}
